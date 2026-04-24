@@ -1,0 +1,302 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2e2419;
+  background: #f6f1ea;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(212, 170, 118, 0.18), transparent 24%),
+    linear-gradient(180deg, #f8f4ee 0%, #efe5d9 100%);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 320px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.panel,
+.canvas-panel {
+  background: rgba(255, 250, 244, 0.9);
+  border: 1px solid #dac9b2;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(91, 69, 42, 0.08);
+}
+
+.panel {
+  padding: 16px;
+}
+
+.panel__header h2,
+.canvas-header h1,
+.sandbox-panel h3 {
+  margin: 0;
+}
+
+.panel__header p,
+.canvas-header p,
+.muted {
+  margin: 6px 0 0;
+  color: #6d604f;
+}
+
+.sidebar__list {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.sidebar__item {
+  text-align: left;
+  padding: 14px;
+  border: 1px solid #d7c8b4;
+  border-radius: 14px;
+  background: #fffdf9;
+  display: grid;
+  gap: 4px;
+}
+
+.sidebar__item:hover {
+  background: #f7efe5;
+}
+
+.canvas-shell {
+  display: grid;
+  gap: 12px;
+}
+
+.canvas-header {
+  padding: 10px 8px 0;
+}
+
+.canvas-panel {
+  height: 68vh;
+  overflow: hidden;
+}
+
+.form-stack {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.form-stack label,
+.form-section {
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cfbca5;
+  background: #fff;
+}
+
+textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+.toggle {
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle input {
+  width: 16px;
+  height: 16px;
+}
+
+.key-value-list {
+  display: grid;
+  gap: 8px;
+}
+
+.key-value-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+}
+
+.ghost-button,
+.primary-button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.ghost-button {
+  background: #efe5d8;
+  color: #4e3d2a;
+}
+
+.primary-button {
+  background: #8b5e34;
+  color: #fff;
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.node-card {
+  min-width: 190px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid #cab59a;
+  background: #fffdfa;
+  box-shadow: 0 8px 18px rgba(98, 71, 42, 0.08);
+}
+
+.node-card.selected {
+  outline: 2px solid #8b5e34;
+}
+
+.node-card__type {
+  text-transform: capitalize;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: #866848;
+}
+
+.node-card__title {
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+.node-card__subtitle {
+  margin-top: 4px;
+  font-size: 0.88rem;
+  color: #6f614f;
+}
+
+.node-card.start {
+  background: #f5fbf1;
+}
+
+.node-card.task {
+  background: #fffaf0;
+}
+
+.node-card.approval {
+  background: #f7f4ff;
+}
+
+.node-card.automation {
+  background: #eef8fb;
+}
+
+.node-card.end {
+  background: #fff3f0;
+}
+
+.sandbox-panel {
+  margin-top: 16px;
+}
+
+.sandbox-panel .panel__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.sandbox-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+pre {
+  margin: 0;
+  padding: 14px;
+  border-radius: 14px;
+  overflow: auto;
+  background: #2f2a24;
+  color: #f6eee2;
+  max-height: 280px;
+  font-size: 0.84rem;
+}
+
+.error-box {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fff0ee;
+  color: #8f3b2f;
+  margin-bottom: 12px;
+}
+
+.log-list {
+  display: grid;
+  gap: 10px;
+}
+
+.log-item {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #faf5ee;
+  border: 1px solid #ddcebb;
+}
+
+.log-item.success {
+  border-color: #b7d8c3;
+}
+
+.log-item.warning {
+  border-color: #ebd59a;
+}
+
+.log-item.error {
+  border-color: #efb0a9;
+}
+
+@media (max-width: 1100px) {
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .canvas-panel {
+    height: 56vh;
+  }
+
+  .sandbox-grid {
+    grid-template-columns: 1fr;
+  }
+}
