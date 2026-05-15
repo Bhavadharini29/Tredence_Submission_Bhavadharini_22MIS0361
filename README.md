@@ -23,7 +23,7 @@ src/
   utils/         validation and serialization helpers
 ```
 
-## How to run
+## Run project
 
 ```bash
 npm install
